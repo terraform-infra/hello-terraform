@@ -2,6 +2,27 @@
 terraform {
   # required_version is the terraform version which we want to apply
   required_version = ">=0.14.0"
+  /*
+    backend "s3" {
+        # bucket should already exist
+        bucket = "my-terraform-backend"
+        key = "sagar-terraform-resources"
+        region = "ap-northeast-1"
+        # dynamo db table also should already exist
+        dynamodb_table = "sagar-terraform-lock"
+      }
+  */
+
+  /*
+    backend "remote" {
+      hostname = "app.terraform.io"
+      organization = "beBit"
+      workspace = {
+        name = "hello-terraform"
+      }
+    }
+  */
+
 }
 
 # Which cloud provider you want to use
